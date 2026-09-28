@@ -70,3 +70,16 @@
 ```
 
 本项目使用 [Sikarugir 官方项目](https://github.com/Sikarugir-App/Sikarugir)、Wine 和 MoltenVK 的运行组件。网易启动器与《光·遇》的权利归各自权利人所有；本仓库不代表这些项目的官方支持，也不另行授予第三方组件的使用许可。
+
+
+## macOS 提示“Apple 无法验证光·遇.app”时
+
+本项目目前只有 ad-hoc 签名，没有 Apple Developer ID 签名和公证，因此从网络下载后，macOS 可能阻止第一次打开。请先确认 DMG 来自本仓库的正式发布页，并核对该版本发布说明中的 SHA-256；不要对来源不明的 App 执行以下操作。
+
+1. 打开 DMG，把“光·遇.app”拖入“应用程序”，等待复制完成。不要直接从 DMG 运行。
+2. 在“应用程序”或启动台点击一次“光·遇”。若出现“Apple 无法验证……”的提示，点击“完成”或关闭提示。
+3. 打开“系统设置”→“隐私与安全”，向下找到“已阻止‘光·遇.app’以保护 Mac”，点击旁边的“仍要打开”。
+4. 按 macOS 提示，用本机密码或触控 ID 确认，然后在随后出现的对话框中点击“打开”。首次启动会复制 SkyCN 环境，显示进度，并打开网易官方启动器。
+5. 这个允许只对当前 Mac 上的这个 App 生效；其他 Mac 第一次安装时需要各自确认。若更新或替换 App，macOS 可能再次要求确认。
+
+这是 [Apple 官方提供的单个 App 允许流程](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unknown-developer-mh40616/mac)。**无需关闭 SIP、全局 Gatekeeper 或 FileVault，也不要使用 `xattr` 命令批量解除隔离。**在没有 Developer ID 签名和 Apple 公证前，无法保证所有 Mac 首次打开时免提示。
