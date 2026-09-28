@@ -8,26 +8,28 @@
 
 ## 下载安装包
 
-从 [v1.1.0 发布页](https://github.com/qingyu308/SkyCN-Mac/releases/tag/v1.1.0)下载 **[SkyCN-Mac-v1.1.0-no-game.dmg](https://github.com/qingyu308/SkyCN-Mac/releases/download/v1.1.0/SkyCN-Mac-v1.1.0-no-game.dmg)**。这是可安装的镜像；GitHub 自动生成的 `Source code.zip` 仅包含仓库文件，不能代替 DMG。
+从 [版本发布页](https://github.com/qingyu308/SkyCN-Mac/releases) 获取安装包。V1.1.4 的附件是 **[SkyCN-Mac-v1.1.4-no-game.pkg](https://github.com/qingyu308/SkyCN-Mac/releases/download/V1.1.4/SkyCN-Mac-v1.1.4-no-game.pkg)**；如果发行页仍只显示 v1.1.0，表示 V1.1.4 草稿尚未公开。GitHub 自动生成的 `Source code.zip` 不是安装包。
 
-公开版 **不包含游戏本体**。游戏必须在安装后通过网易官方启动器下载，以保留正常的登录、更新和校验流程。
+V1.1.4 改用 macOS 原生 PKG：系统安装器把直接启动的 App 放到 `/Applications/光·遇.app`，把独立兼容环境放到 `~/Games/SkyCN/`，安装后自动打开网易启动器。后续从启动台点击“光·遇”即可。安装结束到网易窗口响应之间会显示活动进度提示；不显示无法准确测量的百分比。
+
+公开包 **不包含游戏本体**。游戏由网易官方启动器下载、更新和校验。
 
 | 项目 | 内容 |
 | --- | --- |
-| 安装镜像 | 约 1.08 GB；展开后的 App 与环境约 2.2 GiB |
-| 已包含 | macOS 启动 App、独立 SkyCN Wrapper、Sikarugir Wine Engine、网易启动器，以及兼容性修复 |
+| V1.1.4 安装包 | 1,087,804,114 字节（约 1.09 GB）；展开后的环境约 2.2 GiB |
+| 已包含 | macOS 启动 App、独立 SkyCN Wrapper、Sikarugir Wine Engine、网易启动器与兼容性修复 |
 | 未包含 | 游戏本体、网易账号与密码、Cookies、用户缓存、Rosetta 2、Sikarugir Creator 图形管理程序 |
 | 游戏来源 | 安装后由网易官方启动器下载 |
 
 ## 安装与使用
 
-1. 在 Apple Silicon Mac 上打开 DMG，把 **“光·遇.app”** 拖到 **“应用程序”**。
-2. 首次打开“光·遇”。App 会把独立环境安装到 `~/Games/SkyCN`，然后打开网易 FeverGames 启动器。第一次准备环境需要一些时间。
-3. 如果 macOS 提示安装 Rosetta 2，请按 Apple 的系统提示完成；如遇到 App 安全提示，只针对这个 App 在“系统设置 → 隐私与安全性”中确认。无需关闭 SIP 或全局 Gatekeeper。
-4. 在网易启动器中自行登录，选择《光·遇》并点击下载。下载完成后，继续从官方启动器进入游戏。
-5. 以后直接从启动台点击 **“光·遇”**，无需打开 Terminal。
+1. 在 Apple Silicon Mac 上下载并打开 `SkyCN-Mac-v1.1.4-no-game.pkg`，按 macOS“安装器”提示安装。可能需要管理员密码或 Touch ID。
+2. 如果 macOS 提示安装 Rosetta 2，请按 Apple 的系统提示完成。若系统阻止未公证安装包或 App，按下文的单个项目允许流程操作；无需关闭全局安全功能。
+3. 安装完成后，网易 FeverGames 启动器会自动打开。首次启动期间会出现活动进度条；可关闭提示而不结束启动器。
+4. 在网易启动器中自行登录，选择《光·遇》并下载。下载完成后，从官方启动器进入游戏。
+5. 以后直接从启动台点击 **“光·遇”**；不需要 Terminal，也不会重复显示中间安装器。
 
-首次安装会复用已经存在且完整的 `~/Games/SkyCN` 目录，不会覆盖它。如果该目录存在但不完整，App 会提示处理，不会直接删除数据。建议为环境与游戏下载预留至少 15 GB 空间；实际需求会随游戏更新变化。
+安装脚本会保留已经存在的 `~/Games/SkyCN`。如果这个目录存在但不完整，会报错并保留文件，不会直接删除游戏数据。建议为环境与游戏下载预留至少 15 GB 空间；实际需求会随游戏更新变化。
 
 ## 解决过哪些兼容问题
 
@@ -63,23 +65,20 @@
 
 ## 校验与来源
 
-`v1.1.0` 公开版 DMG：**1,083,389,091 字节**。SHA-256：
+V1.1.4 PKG：1,087,804,114 字节。SHA-256：
 
 ```text
-2d2ebdeb5def60c8c3e89ccf1037b4769720432e6d16dbaec29e829d389e21f6
+cd8433c9bdb6432a394f1b713eeac3f38f69e3ad8f4ae7e3b59ce740ba8f3afa
 ```
 
-本项目使用 [Sikarugir 官方项目](https://github.com/Sikarugir-App/Sikarugir)、Wine 和 MoltenVK 的运行组件。网易启动器与《光·遇》的权利归各自权利人所有；本仓库不代表这些项目的官方支持，也不另行授予第三方组件的使用许可。
+请以 [V1.1.4 发布说明](https://github.com/qingyu308/SkyCN-Mac/releases/tag/V1.1.4)中的附件和校验值为准。本项目使用 [Sikarugir 官方项目](https://github.com/Sikarugir-App/Sikarugir)、Wine 和 MoltenVK 的运行组件。网易启动器与《光·遇》的权利归各自权利人所有；本仓库不代表这些项目的官方支持，也不另行授予第三方组件的使用许可。
 
+## macOS 提示无法验证安装包或“光·遇.app”时
 
-## macOS 提示“Apple 无法验证光·遇.app”时
+V1.1.4 PKG 未使用 Apple Developer ID 签名，也未经过 Apple 公证；App 只有临时签名。macOS 可能阻止首次打开。先确认文件来自本仓库发行页并核对 SHA-256；不要对来源不明的文件执行以下操作。
 
-本项目目前只有 ad-hoc 签名，没有 Apple Developer ID 签名和公证，因此从网络下载后，macOS 可能阻止第一次打开。请先确认 DMG 来自本仓库的正式发布页，并核对该版本发布说明中的 SHA-256；不要对来源不明的 App 执行以下操作。
+1. 尝试打开 PKG。若系统阻止，关闭提示，打开“系统设置 → 隐私与安全性”，找到该安装包对应的提示并选择“仍要打开”，按系统提示确认。
+2. 按 macOS 安装器完成安装。若首次启动“光·遇.app”时再次被阻止，可在同一设置页只允许这份 App，然后重试。
+3. 管理员密码或 Touch ID 均在 macOS 系统界面中自行输入。此允许只作用于当前 Mac 上的相应项目；其他 Mac 可能需要各自确认。
 
-1. 打开 DMG，把“光·遇.app”拖入“应用程序”，等待复制完成。不要直接从 DMG 运行。
-2. 在“应用程序”或启动台点击一次“光·遇”。若出现“Apple 无法验证……”的提示，点击“完成”或关闭提示。
-3. 打开“系统设置”→“隐私与安全”，向下找到“已阻止‘光·遇.app’以保护 Mac”，点击旁边的“仍要打开”。
-4. 按 macOS 提示，用本机密码或触控 ID 确认，然后在随后出现的对话框中点击“打开”。首次启动会复制 SkyCN 环境，显示进度，并打开网易官方启动器。
-5. 这个允许只对当前 Mac 上的这个 App 生效；其他 Mac 第一次安装时需要各自确认。若更新或替换 App，macOS 可能再次要求确认。
-
-这是 [Apple 官方提供的单个 App 允许流程](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unknown-developer-mh40616/mac)。无需关闭 SIP、全局 Gatekeeper 或 FileVault，也不要使用 `xattr` 命令批量解除隔离。在没有 Developer ID 签名和 Apple 公证前，无法保证所有 Mac 首次打开时免提示。
+这是 [Apple 官方提供的单个 App 允许流程](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unknown-developer-mh40616/mac)。无需关闭 SIP、全局 Gatekeeper 或 FileVault，也不要用 `xattr` 批量解除隔离。在没有 Developer ID 签名和 Apple 公证前，无法保证所有 Mac 首次打开时免提示。
