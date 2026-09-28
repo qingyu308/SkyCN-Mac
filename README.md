@@ -82,4 +82,4 @@
 4. 按 macOS 提示，用本机密码或触控 ID 确认，然后在随后出现的对话框中点击“打开”。首次启动会复制 SkyCN 环境，显示进度，并打开网易官方启动器。
 5. 这个允许只对当前 Mac 上的这个 App 生效；其他 Mac 第一次安装时需要各自确认。若更新或替换 App，macOS 可能再次要求确认。
 
-这是 [Apple 官方提供的单个 App 允许流程](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unknown-developer-mh40616/mac)。**无需关闭 SIP、全局 Gatekeeper 或 FileVault，也不要使用 `xattr` 命令批量解除隔离。**在没有 Developer ID 签名和 Apple 公证前，无法保证所有 Mac 首次打开时免提示。
+这是 [Apple 官方提供的单个 App 允许流程](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unknown-developer-mh40616/mac)。无需关闭 SIP、全局 Gatekeeper 或 FileVault，也不要使用 `xattr` 命令批量解除隔离。在没有 Developer ID 签名和 Apple 公证前，无法保证所有 Mac 首次打开时免提示。
