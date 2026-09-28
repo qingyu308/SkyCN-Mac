@@ -8,7 +8,7 @@
 
 ## 下载安装包
 
-从 [v1.1.0 发布页](https://github.com/qingyu308/SkyCN-Mac/releases/tag/v1.1.0)下载 **[安装包 DMG](https://github.com/qingyu308/SkyCN-Mac/releases/download/v1.1.0/-.CN-.-.dmg)**。GitHub 上传时把中文文件名改写成了 `-.CN-.-.dmg`；这是本次发布的安装包，下载后可以在 Finder 中改名为 `光·遇-SkyCN-安装包-公开版.dmg`，不影响内容。请不要下载 GitHub 自动生成的 `Source code.zip`：它只是仓库文件，不是可安装的 App。
+从 [v1.1.0 发布页](https://github.com/qingyu308/SkyCN-Mac/releases/tag/v1.1.0)下载 **[SkyCN-Mac-v1.1.0-no-game.dmg](https://github.com/qingyu308/SkyCN-Mac/releases/download/v1.1.0/SkyCN-Mac-v1.1.0-no-game.dmg)**。这是可安装的镜像；GitHub 自动生成的 `Source code.zip` 仅包含仓库文件，不能代替 DMG。
 
 公开版 **不包含游戏本体**。游戏必须在安装后通过网易官方启动器下载，以保留正常的登录、更新和校验流程。
 
