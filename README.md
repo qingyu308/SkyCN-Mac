@@ -6,6 +6,16 @@
 
 > **已验证设备**：MacBook Air M1、16 GB 内存、macOS 27.2。该机器上已实际验证启动器下载、游戏画面、声音、键盘、鼠标、Apple 自带拼音聊天与候选框，以及从启动台打开 App。其他 Mac、第三方输入法和后续游戏版本尚未逐一验证。
 
+## V1.1.6 启动卡死修复
+
+**完整安装包已构建，GitHub 附件正在上传，尚未发布。** 上传完成后会在 [Releases](https://github.com/qingyu308/SkyCN-Mac/releases) 提供 `SkyCN-Mac-v1.1.6-no-game.pkg`。新用户直接安装，已有 V1.1.4 / V1.1.5 用户可以升级，无需单独放置补丁。
+
+本次定位到 macOS 会终止未声明后台运行、又从未显示窗口的旧启动入口及 Wine 子进程，导致残留的网易窗口无响应。V1.1.6（build 11）补上正确的后台 App 声明，保留原启动逻辑与已验证的下载、图形和输入法修复；没有更换 Wine 或修改游戏。修补后的本机正常启动已跨过原自动终止时间点；完整包六项检查通过，完整 1.1.6 安装流程与其他 Mac 的长期运行仍待验证。
+
+升级前正常退出游戏、网易启动器与其他 Wine 程序。新安装器检测到运行中的进程会拒绝继续，原 App 会备份到 `~/Games/SkyCN/Backup/pre-v1.1.6/`；已有游戏、Prefix、Engine 和网易数据保留。本包不含游戏、实验性 FSR 或屏幕录制模块，也没有 Apple 公证。
+
+V1.1.6：1,087,852,122 字节；SHA-256：`7d32b0cd9e3687996dcf6a713624cd0885e5b11ff48aa49cc43110e9fcee5598`。
+
 ## 下载安装包
 
 当前版本是 **[V1.1.5（中文输入法修复）](https://github.com/qingyu308/SkyCN-Mac/releases/tag/V1.1.5)**。在发布页的 Assets 中下载 `SkyCN-Mac-v1.1.5-no-game.pkg`；GitHub 自动生成的 `Source code.zip` 不是安装包。需要回退时，可查看 [V1.1.4 发布页](https://github.com/qingyu308/SkyCN-Mac/releases/tag/V1.1.4)。
@@ -16,7 +26,7 @@ V1.1.5 使用 macOS 原生 PKG：系统安装器把直接启动的 App 放到 `/
 
 | 项目 | 内容 |
 | --- | --- |
-| V1.1.5 安装包 | 1,087,850,022 字节（约 1.09 GB）；不含游戏本体 |
+| V1.1.5 安装包 | 1,087,850,071 字节（约 1.09 GB）；不含游戏本体 |
 | 已包含 | macOS 启动 App、独立 SkyCN Wrapper、Sikarugir Wine Engine、网易启动器与兼容性修复 |
 | 未包含 | 游戏本体、网易账号与密码、Cookies、用户缓存、Rosetta 2、Sikarugir Creator 图形管理程序 |
 | 游戏来源 | 安装后由网易官方启动器下载 |
@@ -68,10 +78,10 @@ V1.1.5 使用 macOS 原生 PKG：系统安装器把直接启动的 App 放到 `/
 
 ## 校验与来源
 
-V1.1.5 PKG：1,087,850,022 字节。SHA-256：
+V1.1.5 PKG：1,087,850,071 字节。SHA-256：
 
 ```text
-0e4f03633c395ffa2d2a2c5819b059674239be4c3a9cb726c06d367d87bffb1a
+d9e10b5bda501a157ed44aa2017d804e8059e438a452f9b42b42119c61386532
 ```
 
 请以 [V1.1.5 发布说明](https://github.com/qingyu308/SkyCN-Mac/releases/tag/V1.1.5)中的附件和校验值为准。本项目使用 [Sikarugir 官方项目](https://github.com/Sikarugir-App/Sikarugir)、Wine 和 MoltenVK 的运行组件。网易启动器与《光·遇》的权利归各自权利人所有；本仓库不代表这些项目的官方支持，也不另行授予第三方组件的使用许可。
